@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="site-header pt-3">
+        <div class="container text-center">
+            <a class="text-dark" href="index.html">Hangman</a>
+            <hr>
+        </div>
+    </header>
+
+    <main class="container h-100 custom-px-5 py-3">
+        <div class="row">
+            <div class="col-xl-1 col-lg-0 col-md-0 col-sm-0 col-sx-12">
+                <!-- Used only for spacing on larger screens -->
+            </div>
+
+            <div class="health-station col-xl-4 col-lg-5 col-md-12 col-sm-12 col-sx-12">
+                <div class="canvas rounded d-flex justify-content-end">  
+                    <div class="drawing">
+                        <i class="happy-stickman-part crown fas fa-crown fa-3x"></i>
+                        
+                        <svg class="stickman" width="95%" height="85%">
+                            <!-- Legs -->
+                            <line class="other-stickman-part in-game-stickman-part" x1="60%" y1="70%" x2="50%" y2="90%" stroke="black" stroke-width="2.5" />
+                            <line class="other-stickman-part in-game-stickman-part" x1="60%" y1="70%" x2="70%" y2="90%" stroke="black" stroke-width="2.5" />
+
+                            <!-- Torso -->
+                            <line class="other-stickman-part in-game-stickman-part" x1="60%" y1="40%" x2="60%" y2="70%" stroke="black" stroke-width="2.5" />
+
+                            <!-- Sad Arms -->
+                            <line class="sad-stickman-part in-game-stickman-part" x1="50%" y1="65%" x2="60%" y2="50%" stroke="black" stroke-width="2.5" />
+                            <line class="sad-stickman-part in-game-stickman-part" x1="60%" y1="50%" x2="70%" y2="65%" stroke="black" stroke-width="2.5" />
+
+                            <!-- Happy Arms -->
+                            <line class="happy-stickman-part" x1="50%" y1="40%" x2="60%" y2="55%" stroke="black" stroke-width="2.5" />
+                            <line class="happy-stickman-part" x1="60%" y1="55%" x2="70%" y2="40%" stroke="black" stroke-width="2.5" />
+
+                            <!-- Head -->
+                            <circle class="other-stickman-part in-game-stickman-part" cx="60%" cy="30%" r="10%" stroke="black" fill="rgb(40,40,40)" />
+
+                            <!-- Device -->
+                            <line class="sad-stickman-part stickman-gallows" x1="10%" y1="99%" x2="30%" y2="99%" stroke="black" stroke-width="2.5" />
+                            <line class="sad-stickman-part stickman-gallows" x1="20%" y1="99%" x2="20%" y2="5%" stroke="black" stroke-width="2.5" />
+                            <line class="sad-stickman-part stickman-gallows" x1="19.4%" y1="5.6%" x2="60.6%" y2="5.6%" stroke="black" stroke-width="2.5" />
+                            <line class="sad-stickman-part in-game-stickman-part" x1="60%" y1="5%" x2="60%" y2="20%" stroke="black" stroke-width="2.5" />
+                        </svg>
+                    </div>
+
+                    <button class="reset-button mt-auto"><i class="fas fa-redo fa-lg"></i></button>
+                </div>
+
+                <table class="hearts-table align-self-center">
+                    <tr>
+                        <th class="rounded"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></th>
+                        <th class="rounded"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></th>
+                        <th class="rounded"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></th>
+                        <th class="rounded"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></th>
+                        <th class="rounded"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></th>
+                        <th class="rounded"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></th>
+                        <th class="rounded"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="guessing-station col-xl-6 col-lg-7 col-md-12 col-sm-12 col-sx-12 d-flex justify-content-center">
+                <div class="align-self-center"> 
+                    <table class="word-table">
+                        <tr>
+                            <!-- Populated in JavaScript -->
+                        </tr>
+                    </table>
+
+                    <div class="letter-container d-flex justify-content-center">
+                        <div class="p-2">
+                            <div class="custom-p-1">
+                                <button class="rounded text-center">A</button>
+                                <button class="rounded text-center">B</button>
+                                <button class="rounded text-center">C</button>
+                                <button class="rounded text-center">D</button>
+                                <button class="rounded text-center">E</button>
+                                <button class="rounded text-center">F</button>
+                                <button class="rounded text-center">G</button>
+                                <button class="rounded text-center">H</button>
+                                <button class="rounded text-center">I</button>
+                            </div>
+    
+                            <div class="custom-p-1">
+                                <button class="rounded text-center">J</button>
+                                <button class="rounded text-center">K</button>
+                                <button class="rounded text-center">L</button>
+                                <button class="rounded text-center">M</button>
+                                <button class="rounded text-center">N</button>
+                                <button class="rounded text-center">O</button>
+                                <button class="rounded text-center">P</button>
+                                <button class="rounded text-center">Q</button>
+                                <button class="rounded text-center">R</button>
+                            </div>
+                            
+                            <div class="custom-p-1 shorter-letter-line-center">
+                                <button class="rounded text-center">S</button>
+                                <button class="rounded text-center">T</button>
+                                <button class="rounded text-center">U</button>
+                                <button class="rounded text-center">V</button>
+                                <button class="rounded text-center">W</button>
+                                <button class="rounded text-center">X</button>
+                                <button class="rounded text-center">Y</button>
+                                <button class="rounded text-center">Z</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-1 col-lg-0 col-md-0 col-sm-0 col-sx-12">
+                <!-- Used only for spacing on larger screens -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-auto py-3 text-center">
+        <p>A simple hangman game built by Zoltan Kuli.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

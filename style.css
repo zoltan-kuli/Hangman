@@ -1,0 +1,350 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background-color: snow !important;
+}
+
+/****************************************************************************************/
+
+
+
+/* Header Components Styles */
+/* Main */
+header {
+    padding-bottom: 3rem;
+}
+
+header a {
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+header a:active {
+    outline: 0 !important;
+}
+
+header hr {
+    border: 0;
+    margin: 0.5rem;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(28, 28, 28, 0), rgba(28, 28, 28, 0.75), rgba(28, 28, 28, 0));
+}
+
+/****************************************************************************************/
+
+
+
+/* Base */
+.container {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: fit-content;
+    max-width: none !important;
+    overflow: hidden;
+}
+
+/****************************************************************************************/
+
+
+
+/* Healt Station Components Styles */
+/* Main */
+.health-station {
+    height: 20rem;
+    margin: auto;
+    padding: 0 !important;
+}
+
+.custom-px-5 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.canvas {
+    width: 16rem;
+    height: 16rem;
+    margin: auto;
+    background-color: rgb(255,240,240);
+    border-bottom: 0.125rem solid rgb(28, 28, 28, 1) !important;
+    border: 0.075rem solid rgb(28, 28, 28, 0.75);
+}
+
+
+/* Drawing */
+.drawing {
+    margin-top: 1.0rem;
+}
+
+.crown {
+    color: gold;
+    position: absolute;
+    margin-left: 5.85rem;
+    margin-top: 0.6rem;
+    visibility: hidden;
+}
+
+.stickman line,circle {
+    visibility: hidden;
+}
+
+.visible,.stickman-gallows {
+    visibility: visible !important;
+}
+
+
+/* Reset Button */
+.reset-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.reset-button:hover {
+    color: rgb(28, 28, 28, 0.75);    
+}
+
+.reset-button:focus {
+    outline: 0 !important;
+}
+
+
+/* Hearts Table */
+.hearts-table {
+    margin: auto;
+    margin-top: 0.5rem;
+    border-collapse: separate;
+    border-spacing: 0.10rem 0rem;
+}
+
+.hearts-table th {
+    width: 1.8rem;
+    height: 1.8rem;
+    text-align: center;
+}
+
+.hearts-table i {
+   color: red;
+}
+
+/****************************************************************************************/
+
+
+
+/* Guessing Station Components Styles */
+/* Main */
+.guessing-station {
+    height: 20rem;
+    margin: auto;
+    padding: 0 !important;
+}
+
+
+/* Word Table */
+.word-table {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0.25rem 0rem;
+}
+
+.word-table th {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: rgb(255,240,240);
+    border: 0.075rem solid rgb(28, 28, 28, 0.75);
+    border-bottom: 0.125rem solid rgb(28, 28, 28, 1) !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.space-letter-th {
+    visibility: hidden;
+}
+
+
+/* Letter Container */
+.letter-container {
+    margin-bottom: 2rem;
+    cursor: default;
+}
+
+.shorter-letter-line-center {
+    margin: auto;
+    width: fit-content;
+}
+
+.letter-container button {
+    width: 1.8rem;
+    height: 1.8rem;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    border: 0.075rem solid rgb(28, 28, 28, 0.75);
+    border-bottom: 0.125rem solid rgb(28, 28, 28, 1) !important;
+}
+
+.letter-container button:disabled {
+    opacity: 0.5!important;
+}
+
+.letter-container button:not(:disabled):hover {
+    background-color: rgb(255,240,240);
+}
+
+.letter-container button:not(:disabled):active {
+    background-color: rgb(255,240,240);
+    outline: 0 !important;
+}
+
+.custom-p-1 {
+    padding: 0.25rem;
+}
+
+/****************************************************************************************/
+
+
+
+/* Footer Componenets Styles */
+/* Main */
+.site-footer p {
+    margin-bottom: 0;
+}
+
+/****************************************************************************************/
+
+
+
+/* Different Screen Styles */
+@media screen and (max-width: 992px) {
+    /* Header */
+    header {
+        padding-bottom: 1.5rem !important;
+    }
+
+
+    /* Health Station */
+    .guessing-station {
+        height: 12rem !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /* Base */
+    .custom-px-5 {
+        padding-left: 0.5rem!important;
+        padding-right: 0.5rem!important;
+        margin-left: 0rem!important;
+        margin-right: 0rem!important;
+    }
+    
+
+    /* Health Station */
+    .container {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    /* Header */
+    header {
+        padding-bottom: 1rem !important;
+    }
+
+    header a {
+        font-size: 1.5rem !important;
+    }
+
+
+    /* Health Station */
+    .health-station {
+        height: 14rem !important;
+    }
+
+    .canvas {
+        width: 12rem !important;
+        height: 12rem !important;
+    }
+
+    .crown {
+        font-size: 2.25em !important;
+        color: gold;
+        position: absolute;
+        margin-left: 4.45rem !important;
+        margin-top: 0.4rem !important;
+        visibility: hidden;
+    }
+
+    .reset-button {
+        width: 1.8rem !important;
+        height: 1.8rem !important;
+        font-size: 80% !important;
+    }
+
+
+    /* Hearts Table */
+    .hearts-table {
+        margin-top: 0rem !important;
+        border-spacing: 0.05rem 0rem !important;
+    }
+    
+    .hearts-table th {
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+        text-align: center;
+    }
+
+    .hearts-table i {
+        font-size: 97.5%;
+    }
+
+
+    /* Guessing Station */
+    .guessing-station {
+        height: 8rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .word-table th {
+        width: 1.35rem !important;
+        height: 1.35rem !important;
+        font-size: 55% !important;
+    }
+
+
+    /* Letter Container */
+    .letter-container {
+        margin-bottom: 0rem !important;
+    }
+
+    .letter-container button {
+        width: 1.35rem !important;
+        height: 1.35rem !important;
+        font-size: 55% !important;
+    }
+
+    .custom-p-1 {
+        padding: 0rem !important;
+    }
+
+
+    /* Footer */
+    .site-footer {
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+    }
+
+    .site-footer p {
+        font-size: 90% !important;
+    }
+}
