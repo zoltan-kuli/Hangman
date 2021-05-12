@@ -1,6 +1,6 @@
 # The Story Behind Hangman
 
-I created Hangman during the fall of 2020 for my second web development class.
+I made Hangman during the fall of 2020 for my second web development class.
 
 I used the experience I gained from making [Word Guessing Game](https://github.com/ZoltanKuli/Word-Guessing-Game), but I tried to make this project better.
 
