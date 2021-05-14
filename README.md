@@ -16,6 +16,8 @@ You can try out Hangman using [this link](https://people.inf.elte.hu/gshkd4/page
 * HTML
 * CSS
 * Bootstrap
+* Visual Studio Code
+* WinSCP
 
 # Impact
 * My friends had a great time playing the game.
