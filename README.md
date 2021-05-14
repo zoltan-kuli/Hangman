@@ -1,11 +1,21 @@
-# The Story Behind Hangman
+# Hangman
+I made Hangman during the fall of 2020 for my Web Development II class.
 
-I made Hangman during the fall of 2020 for my second web development class.
-
-I used the experience I gained from making [Word Guessing Game](https://github.com/ZoltanKuli/Word-Guessing-Game), but I tried to make this project better.
-
-I decided to use Bootstrap so that it would be easier to adapt to different screen sizes and resolutions, and I also tried to go for a calming look that was pleasant on the eyes.
-
-Looking back, recreating this classic game was definitely a fun experience, and by the time I finished it, I got much better at JavaScript.
+My goal was to practice JavaScript and create an HTML-CSS template for my next project, [SET With Friends](https://github.com/ZoltanKuli/SET-With-Friends).
 
 You can try out Hangman using [this link](https://people.inf.elte.hu/gshkd4/pages/games/hangman/).
+
+# Skills Demonstrated
+* Created a responsive website with Bootstrap, whose core could be reused.
+* Created a simple animation with JavaScript.
+* Implemented a simple searching algorithm.
+
+# Technologies Used
+* JavaScript
+* JSON
+* HTML
+* CSS
+* Bootstrap
+
+# Impact
+* My friends had a great time playing the game.
