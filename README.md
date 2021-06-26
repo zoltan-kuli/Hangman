@@ -20,4 +20,4 @@ You can try out Hangman using [this link](https://people.inf.elte.hu/gshkd4/page
 * WinSCP
 
 # Impact
-* My friends had a great time playing the game.
+My friends and family had a great time playing the game.
