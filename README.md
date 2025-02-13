@@ -3,7 +3,7 @@ I made Hangman during the fall of 2020 for my Web Development II class.
 
 My goal was to practice JavaScript and start learning Bootstrap.
 
-You can try out Hangman using [this link](https://zoltankuli.github.io/Hangman/).
+You can try out Hangman using [this link](https://zoltan-kuli.github.io/Hangman/).
 
 # Highlights
 * Created a responsive website with Bootstrap.
